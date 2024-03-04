@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "b3d3f937-c928-404b-8cb1-dc9e7da5e6ae",
+		"name": "fullstack-backend-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31152486",
+		"_collection_link": "https://hrm-systems.postman.co/workspace/UKA-Solutions-Tech-Assessments~c0f4524a-50e0-4415-a496-a2adade0c62e/collection/31030394-b3d3f937-c928-404b-8cb1-dc9e7da5e6ae?action=share&source=collection_link&creator=31152486"
+	},
+	"item": [
+		{
+			"name": "Get Persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Person 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<persons>\r\n  <person>\r\n    <name>John-Jane Doe</name>\r\n\t<gender>t</gender>\r\n\t<age>23</age>\r\n  </person>\r\n</persons>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/persons/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons",
+						"add"
+					]
+				},
+				"description": "Adds a a XML-Payload containing persons"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Person 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<persons>\r\n  <person>\r\n    <name>John Doe Sr</name>\r\n\t<gender>m</gender>\r\n\t<age>53</age>\r\n  </person>\r\n  <person>\r\n    <name>John Doe</name>\r\n\t<gender>m</gender>\r\n\t<age>23</age>\r\n  <person>\r\n    <name>John Doe Jr</name>\r\n\t<gender>m</gender>\r\n\t<age>2</age>\r\n  </person>\r\n  </person>\r\n</persons>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/persons/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons",
+						"add"
+					]
+				},
+				"description": "Adds a a XML-Payload containing persons"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Person 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<persons>\r\n  <person>\r\n    <name>Jane Doe Sr</name>\r\n\t<gender>f</gender>\r\n\t<age>47</age>\r\n  </person>\r\n  <person>\r\n    <name>Jane Doe</name>\r\n\t<gender>f</gender>\r\n\t<age>17</age>\r\n  </person>\r\n</persons>"
+				},
+				"url": {
+					"raw": "http://localhost:8080/persons/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons",
+						"add"
+					]
+				},
+				"description": "Adds a a XML-Payload containing persons"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/persons/statistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
