@@ -6,15 +6,15 @@ import org.xml.sax.SAXParseException;
 
 public class ValidationErrorHandler implements ErrorHandler{
     
-   public void warning(SAXParseException exception) throws SAXException {
+   public void warning(SAXParseException exception)  {
        // nothing to do...
    }
  
-   public void error(SAXParseException exception) throws SAXException {
+   public void error(SAXParseException exception) {
        throw new PersonValidationException(exception.getLocalizedMessage(), exception);
    }
  
-   public void fatalError(SAXParseException exception) throws SAXException {
+   public void fatalError(SAXParseException exception) {
        throw new PersonValidationException(exception.getLocalizedMessage(), exception);
    }
 

@@ -14,7 +14,7 @@ public class StatisticsError {
     @XmlElement
     private int counter;
     @XmlElement
-    private List<String> message;
+    private final List<String> message;
     
     public StatisticsError() {
         message = new ArrayList<>();
