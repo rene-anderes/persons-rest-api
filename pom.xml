@@ -110,5 +110,40 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<profiles>
+	<profile>
+		<id>create-persons</id>
+		<activation>
+			<activeByDefault>false</activeByDefault>
+		</activation>
+		<build>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>jaxb2-maven-plugin</artifactId>
+					<version>2.5.0</version>
+					<executions>
+						<execution>
+							<id>generate-persons</id>
+							<goals>
+								<goal>xjc</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+								<sources>
+									<source>${project.basedir}/src/main/resources/org/anderes/persons/domain/fullstack-backend-challenge.xsd</source>
+								</sources>
+								<clearOutputDir>false</clearOutputDir>
+								<xjbSources>
+									<xjbSource>${project.basedir}/src/main/resources/org/anderes/persons/domain/bindings.xjb</xjbSource>
+								</xjbSources>
+								<noGeneratedHeaderComments>true</noGeneratedHeaderComments>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</build>
+	</profile>
+	</profiles>
 </project>

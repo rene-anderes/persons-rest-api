@@ -9,8 +9,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.anderes.persons.domain.Persons;
 import org.anderes.persons.domain.Statistics;
+import org.anderes.persons.domain.generated.Persons;
 
 
 @Path("/persons")

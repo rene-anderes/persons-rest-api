@@ -1,6 +1,6 @@
 package org.anderes.persons.rest;
 
-import org.anderes.persons.domain.Persons;
+import org.anderes.persons.domain.generated.Persons;
 
 public interface PersonService {
 

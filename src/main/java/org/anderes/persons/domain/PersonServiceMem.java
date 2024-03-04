@@ -12,6 +12,9 @@ import javax.xml.bind.util.JAXBSource;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.SchemaFactory;
 
+import org.anderes.persons.domain.generated.ObjectFactory;
+import org.anderes.persons.domain.generated.Person;
+import org.anderes.persons.domain.generated.Persons;
 import org.anderes.persons.rest.PersonService;
 import org.xml.sax.SAXException;
 
@@ -35,13 +38,13 @@ public class PersonServiceMem implements PersonService {
     @Override
     public int save(Persons persons) {
         validate(persons);
-        personCollection.addAll(persons.person);
+        personCollection.addAll(persons.getPerson());
         return personCollection.size();
     }
 
     void validate(Persons persons) {
         try {
-            final var isSchema = Persons.class.getResourceAsStream("fullstack-backend-challenge.xsd");
+            final var isSchema = Persons.class.getResourceAsStream("../fullstack-backend-challenge.xsd");
             final var schemaSource = new StreamSource(isSchema);
             final var context = JAXBContext.newInstance(ObjectFactory.class.getPackageName(), ObjectFactory.class.getClassLoader());
             final var sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);

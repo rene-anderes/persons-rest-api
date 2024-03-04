@@ -1,9 +1,9 @@
 package ch.anderes.persons.domain;
 
-import org.anderes.persons.domain.ObjectFactory;
 import org.anderes.persons.domain.PersonServiceMem;
 import org.anderes.persons.domain.PersonValidationException;
-import org.anderes.persons.domain.Persons;
+import org.anderes.persons.domain.generated.ObjectFactory;
+import org.anderes.persons.domain.generated.Persons;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
