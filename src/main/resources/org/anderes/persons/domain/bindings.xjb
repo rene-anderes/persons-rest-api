@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<jaxb:bindings
-        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
-        xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
-        xmlns:xs="http://www.w3.org/2000/10/XMLSchema-instance"
-        xs:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd"
-        jaxb:version="2.0">
+
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+               jaxb:extensionBindingPrefixes="xjc"
+               version="2.0"> 
 
     <jaxb:bindings schemaLocation="fullstack-backend-challenge.xsd">
         <jaxb:schemaBindings>
